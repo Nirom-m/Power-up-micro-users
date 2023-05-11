@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IUserRepository extends JpaRepository<UserEntity, Long> {
-    Optional<UserEntity> findByPersonEntityIdAndRoleEntityId(Long idPerson, Long idRole);
-    void deleteByPersonEntityIdAndRoleEntityId(Long idPerson, Long idRole);
-    List<UserEntity> findAllByRoleEntityId(Long idRole, Pageable pageable);
-    List<UserEntity> findAllByPersonEntityId(Long idPerson);
+    Optional<UserEntity> findByDniNumber(String dniNumber);
+    Optional<UserEntity> findByMailAndPassword(String mail, String password);
+    boolean existsByMail(String mail);
 }
