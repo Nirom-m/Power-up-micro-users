@@ -34,28 +34,30 @@ To get a local copy up and running follow these steps.
 1. Clone the repository
 2. Change directory
    ```sh
-   cd power-up-arquetipo-v3
+   cd <name proyect>
    ```
-3. Create a new database in MySQL called powerup
+3. Create a new database in MySQL called users
 4. Update the database connection settings
    ```yml
    # src/main/resources/application-dev.yml
    spring:
       datasource:
-          url: jdbc:mysql://localhost/powerup
+          url: jdbc:mysql://localhost/users
           username: root
           password: <your-password>
    ```
-5. After the tables are created execute src/main/resources/data.sql content to populate the database
-6. Open Swagger UI and search the /auth/login endpoint and login with userDni: 123, password: 1234
+5. After the tables are created execute src/main/resources/data.sql content to create two roles
+
 
 <!-- USAGE -->
 ## Usage
 
-1. Right-click the class PowerUpApplication and choose Run
+1. Right-click the class UserMicroserviceApplication and choose Run
 2. Open [http://localhost:8090/swagger-ui/index.html](http://localhost:8090/swagger-ui/index.html) in your web browser
 
 <!-- ROADMAP -->
 ## Tests
 
 - Right-click the test folder and choose Run tests with coverage
+
+## We keep building!
